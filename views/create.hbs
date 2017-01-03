@@ -1,0 +1,12 @@
+<form action="post" id="new-user">
+  <label for="name">Username</label>
+  <input type="text" name="name" placeholder="Username">
+  <button type="submit">Submit</button>
+</form>
+
+<ul id="user-list">
+  {{#each users}}
+
+  <a href="/users/{{this.id}}"><li>{{this.name}}</li></a>
+  {{/each}}
+</ul>

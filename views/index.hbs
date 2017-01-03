@@ -1,0 +1,10 @@
+<ul id="user-list">
+  {{#each users}}
+    <li>
+      <a href="/users/{{this.id}}">
+        {{this.name}}
+      </a>
+      <button class="delete" data-id="{{this.id}}">Delete</button>
+    </li>
+  {{/each}}
+</ul>
