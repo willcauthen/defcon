@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Main</title>
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  
   <!-- custom scripts/stylesheets -->
   <link rel="stylesheet" type="text/css" href="style.css">
 
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="auth.js"></script>
 </head>
 <body>
+  <a href="/users/{{user._id}}" class="logged-in" style="display:none">Profile</a>
+  <a class="not-logged-in" href="/login">Login</a>
+  <a class="not-logged-in" href="/signup">Register</a>
   {{{body}}}
 </body>
 </html>
