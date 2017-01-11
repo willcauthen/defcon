@@ -3,19 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Main</title>
-  <!-- custom scripts/stylesheets -->
-  <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- custom scripts/stylesheets -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="auth.js"></script>
 </head>
 <body>
-  <a href="/users/{{user._id}}" class="logged-in" style="display:none">Profile</a>
-  <a class="not-logged-in" href="/login">Login</a>
-  <a class="not-logged-in" href="/signup">Register</a>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active">
+    <a href="/users">Home</a>
+  </li>
+  <li class="logged-in" role="presentation">
+    <a href="/users/{{user._id}}">Profile</a>
+  </li>
+  <li class="not-logged-in" role="presentation">
+    <a href="/login">Login</a>
+  </li>
+  <li class="not-logged-in" role="presentation">
+    <a href="/signup">Register</a>
+  </li>
+  <li class="logged-in" role="presentation">
+    <a id="logout" href="/login">Logout</a>
+  </li>
+</ul>
   {{{body}}}
 </body>
 </html>
